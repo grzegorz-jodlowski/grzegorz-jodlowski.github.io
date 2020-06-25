@@ -1,6 +1,5 @@
 {
   "name": "grzegorz-jodlowski.github.io",
-  "homepage": "https://github.com/grzegorz-jodlowski/grzegorz-jodlowski.github.io",
   "version": "0.1.0",
   "scripts": {
     "start": "run-p start:* ",
