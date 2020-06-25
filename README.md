@@ -1,1 +1,0 @@
-# grzegorz-jodlowski.github.io

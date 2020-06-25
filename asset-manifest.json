@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/css/main.5f361e03.chunk.css",
+    "main.js": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/js/main.91182de0.chunk.js",
+    "main.js.map": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/js/main.91182de0.chunk.js.map",
+    "runtime-main.js": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/js/runtime-main.034e7f44.js",
+    "runtime-main.js.map": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/js/runtime-main.034e7f44.js.map",
+    "static/js/2.0c96292d.chunk.js": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/js/2.0c96292d.chunk.js",
+    "static/js/2.0c96292d.chunk.js.map": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/js/2.0c96292d.chunk.js.map",
+    "index.html": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/index.html",
+    "precache-manifest.5e4b12486008cbbf7e8d8e701dcfe3b9.js": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/precache-manifest.5e4b12486008cbbf7e8d8e701dcfe3b9.js",
+    "service-worker.js": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.0c96292d.chunk.js.LICENSE.txt": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/js/2.0c96292d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/grzegorz-jodlowski/grzegorz-jodlowski.github.io/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.034e7f44.js",
+    "static/js/2.0c96292d.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.91182de0.chunk.js"
+  ]
+}
