@@ -1,0 +1,47 @@
+@import "./settings.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100vw;
+  font-size: ($base-size * 1.6);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $color-text;
+  background: $color-background;
+  font-family: $font-text;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+// .container {
+//   margin: 2rem;
+//   align-self: center;
+//   max-width: $container-width-xl;
+//   width: 100%;
+//   flex-grow: 1;
+
+//   @media (max-width: $breakpoint-xl) {
+//     max-width: $container-width-lg;
+//   }
+
+//   @media (max-width: $breakpoint-lg) {
+//     max-width: 95%;
+//   }
+// }

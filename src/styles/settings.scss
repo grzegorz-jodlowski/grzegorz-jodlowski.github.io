@@ -1,0 +1,47 @@
+$UI0: #ffffff;
+$UI1: #f5f7fa;
+$UI2: #cbd2d9;
+$UI3: #52606d;
+$UI4: #171f3f;
+
+$Primary1: #e6f5ff;
+$Primary2: #cccccc;
+$Primary3: #0593fb;
+$Primary4: #076fbb;
+
+$Secondary1: #06c847;
+$Secondary2: #653cad;
+$Secondary3: #2251cc;
+
+$color-frame: $UI4;
+$color-header: $UI4;
+$color-header-bright: $UI0;
+$color-text: $UI3;
+$color-text-bright: $UI0;
+$color-background: $UI0;
+$color-background-section: $UI1;
+$color-link: $Primary3;
+$color-avatar-frame: $UI2;
+$color-knowledge-section: $Secondary1;
+$color-something-section: $Secondary2;
+$color-want-section: $Secondary3;
+$color-contact-section: $Primary3;
+
+$font-header: "Poppins", sans-serif;
+$font-text: "Poppins", sans-serif;
+
+$radius: 5px;
+
+$base-size: 10px;
+
+$container-width-xl: 1600px;
+$container-width-lg: 1160px;
+$container-width-m: 960px;
+
+$breakpoint-xl: 1600px;
+$breakpoint-lg: 1200px;
+$breakpoint-m: 1024px;
+$breakpoint-s: 768px;
+$breakpoint-xs: 540px;
+
+$transition: all 0.3s;
