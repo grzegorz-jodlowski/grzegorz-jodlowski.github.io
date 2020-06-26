@@ -4,11 +4,20 @@ import clsx from 'clsx';
 
 import styles from './Homepage.module.scss';
 
+import { Hero } from '../../features/Hero/Hero';
+import { Skills } from '../../features/Skills/Skills';
+import { Projects } from '../../features/Projects/Projects';
+import { Courses } from '../../features/Courses/Courses';
+
+
 const Component = ({ className, children }) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>Homepage</h2>
-    {children}
-  </div>
+  <main className={clsx(className, styles.root)}>
+    <Hero />
+    <Skills />
+    <Projects />
+    <Courses />
+  </main>
+
 );
 
 Component.propTypes = {
