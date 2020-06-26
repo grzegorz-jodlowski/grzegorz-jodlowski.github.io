@@ -1,6 +1,5 @@
 export const content = {
-  heroTitle: 'Hey there! 👋 My name is Grzegorz and I’m an aspiring Frontend developer, Pharmacist and mountain lover.',
-  heroDescription: 'You might be interested in checking the list of my skills. Don’t forget to have a glimpse at my projects. Currently I’m looking for a new challenges so if you have one - contact me 😊',
+  heroTitle: 'Hey there! 👋 My name is Grzegorz and I’m Frontend developer, Pharmacist and mountain lover.',
   email: 'grzegorz.jodlowski@gmail.com',
   workingKnowledge: [],
   knowSomething: [],
