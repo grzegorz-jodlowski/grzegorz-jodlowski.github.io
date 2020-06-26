@@ -1,5 +1,12 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  position: relative;
   flex-grow: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  right: 6rem;
 }
