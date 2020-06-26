@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import styles from './MainLayout.module.scss';
+import styles from './Homepage.module.scss';
 
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
+    <h2>Homepage</h2>
     {children}
   </div>
 );
@@ -16,7 +17,7 @@ Component.propTypes = {
 };
 
 export {
-  Component as MainLayout,
-  Component as MainLayoutComponent, //for tests
+  Component as Homepage,
+  Component as HomepageComponent, //for tests
 };
 

@@ -1,14 +1,12 @@
 import React from 'react';
+import { MainLayout } from './components/layout/MainLayout/MainLayout';
+import { Homepage } from './components/views/Homepage/Homepage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <MainLayout>
+      <Homepage />
+    </MainLayout>
   );
 }
 
