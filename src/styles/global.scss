@@ -20,8 +20,12 @@ body {
   color: $color-text;
   background: $color-background;
   font-family: $font-text;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   overflow-x: hidden;
+  min-height: 100vh;
+  padding: 8px;
+  background-clip: content-box;
+  box-shadow: inset 0 0 0 8px $color-frame;
 }
 
 a,
