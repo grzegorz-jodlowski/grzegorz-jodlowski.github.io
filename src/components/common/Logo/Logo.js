@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import styles from './Logo.module.scss';
 
-const Component = ({ className }) => <img src='logo.svg' alt='Logo strony.' className={clsx(className, styles.root)} />;
+const Component = ({ className }) => <img src='logo.svg' alt='Website logo.' className={clsx(className, styles.root)} />;
 
 Component.propTypes = {
   className: PropTypes.string,

@@ -6,7 +6,7 @@ import styles from './Avatar.module.scss';
 
 const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
-    <img src='avatar.jpg' alt='Avatar właściciela strony' className={styles.image} />
+    <img src='avatar.jpg' alt="Owner's avatar" className={styles.image} />
   </div>
 );
 
