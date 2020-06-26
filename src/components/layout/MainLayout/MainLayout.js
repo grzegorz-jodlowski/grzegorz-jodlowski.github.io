@@ -4,9 +4,13 @@ import clsx from 'clsx';
 
 import styles from './MainLayout.module.scss';
 
+import { Footer } from '../Footer/Footer';
+
+
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
     {children}
+    <Footer />
   </div>
 );
 
