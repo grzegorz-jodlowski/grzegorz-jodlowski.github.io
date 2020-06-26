@@ -5,9 +5,11 @@ import clsx from 'clsx';
 import styles from './Skills.module.scss';
 
 const Component = ({ className, children }) => (
-  <section className={clsx(className, styles.root, 'container')}>
-    <h2>Skills</h2>
-    {children}
+  <section className={clsx(className, styles.root)}>
+    <div className={'container'}>
+      <h2>Skills</h2>
+      {children}
+    </div>
   </section>
 );
 

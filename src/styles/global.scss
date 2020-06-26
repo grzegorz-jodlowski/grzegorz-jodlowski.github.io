@@ -10,7 +10,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   width: 100vw;
   font-size: ($base-size * 1.6);
   scroll-behavior: smooth;
@@ -21,7 +21,7 @@ body {
   background: $color-background;
   font-family: $font-text;
   // overflow-y: scroll;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   min-height: 100vh;
   padding: 8px;
   background-clip: content-box;
@@ -36,15 +36,13 @@ a:visited {
 
 .container {
   margin: 0 auto;
-  // max-width: $container-width-xl;
-  width: 100%;
-  // background-color: gray;
+  max-width: $container-width-xl;
 
   @media (max-width: $breakpoint-xl) {
-    // max-width: $container-width-lg;
+    max-width: $container-width-lg;
   }
 
   @media (max-width: $breakpoint-lg) {
-    // max-width: 95%;
+    max-width: 95%;
   }
 }
