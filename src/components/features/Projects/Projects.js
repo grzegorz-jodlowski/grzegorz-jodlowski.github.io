@@ -4,16 +4,18 @@ import clsx from 'clsx';
 
 import styles from './Projects.module.scss';
 
-const Component = ({ className, children }) => (
+import { Project } from '../Project/Project';
+
+
+const Component = ({ className, projects }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Projects</h2>
-    {children}
+    {projects.map(project => <Project key={project.id} />)}
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
+  projects: PropTypes.array,
 };
 
 export {
