@@ -8,6 +8,7 @@ import { Title } from '../../common/Title/Title';
 import { Projects } from '../Projects/Projects';
 
 import { content } from '../../../content';
+import { Spinner } from '../../common/Spinner/Spinner';
 
 
 class Component extends React.Component {
@@ -36,7 +37,7 @@ class Component extends React.Component {
         <div className={'container'}>
           <Title text='Recent projects' size='big' />
           <p className={styles.description}>{content.projectDescription}</p>
-          <Projects projects={projects} />
+          {loading ? <Spinner /> : <Projects projects={projects} />}
         </div>
       </section>
     );
