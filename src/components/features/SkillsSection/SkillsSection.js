@@ -4,23 +4,29 @@ import clsx from 'clsx';
 
 import styles from './SkillsSection.module.scss';
 
-import { Title } from '../../common/Title/Title';
-import { Skill } from '../Skill/Skill';
+import { content } from '../../../content';
 
-const Component = ({ className, title, variant, skills }) => (
-  <article className={clsx(className, styles.root)}>
-    <Title text={title} size='medium' variant={variant} decoration />
-    <div className={styles.list}>
-      {skills.map(skill => <Skill key={skill} variant={variant} text={skill} />)}
-    </div>
-  </article>
-);
+import { Title } from '../../common/Title/Title';
+import { Skills } from '../Skills/Skills';
+
+
+const Component = ({ className }) => {
+  const { workingKnowledge, knowSomething, wantToLearn } = content.skills;
+
+  return (
+    <section id='skills' className={clsx(className, styles.root)}>
+      <div className={'container'}>
+        <Title text='My Skills' size='big' underline />
+        <Skills skills={workingKnowledge} title='Working knowledge' variant='green' />
+        <Skills skills={knowSomething} title='Know something about' variant='violet' />
+        <Skills skills={wantToLearn} title='Want to learn' variant='blue' />
+      </div>
+    </section>
+  );
+};
 
 Component.propTypes = {
   className: PropTypes.string,
-  variant: PropTypes.string,
-  title: PropTypes.string,
-  skills: PropTypes.array,
 };
 
 export {

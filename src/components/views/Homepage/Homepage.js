@@ -6,7 +6,7 @@ import styles from './Homepage.module.scss';
 
 import { Logo } from '../../common/Logo/Logo';
 import { Hero } from '../../features/Hero/Hero';
-import { Skills } from '../../features/Skills/Skills';
+import { SkillsSection } from '../../features/SkillsSection/SkillsSection';
 import { ProjectsSection } from '../../features/ProjectsSection/ProjectsSection';
 import { Courses } from '../../features/Courses/Courses';
 
@@ -15,7 +15,7 @@ const Component = ({ className, children }) => (
   <main className={clsx(className, styles.root)}>
     <Logo className={styles.logo} />
     <Hero />
-    <Skills />
+    <SkillsSection />
     <ProjectsSection />
     <Courses />
   </main>
