@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import styles from './Footer.module.scss';
 
 const Component = ({ className, children }) => (
-  <footer className={clsx(className, styles.root)}>
+  <footer id='contact' className={clsx(className, styles.root)}>
     <div className={'container'}>
       <h2>Footer</h2>
     </div>

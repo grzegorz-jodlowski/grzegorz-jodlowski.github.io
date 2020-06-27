@@ -14,7 +14,7 @@ const Component = ({ className }) => {
   const { workingKnowledge, knowSomething, wantToLearn } = content.skills;
 
   return (
-    <section className={clsx(className, styles.root)}>
+    <section id='skills' className={clsx(className, styles.root)}>
       <div className={'container'}>
         <Title text='My Skills' variant='big' underline />
         <SkillsSection skills={workingKnowledge} variant='green' />
