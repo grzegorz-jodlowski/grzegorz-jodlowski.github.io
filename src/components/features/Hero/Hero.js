@@ -11,7 +11,7 @@ import { Email } from '../../common/Email/Email';
 
 
 const Component = ({ className }) => (
-  <section className={clsx(className)}>
+  <section className={clsx(className, styles.section)}>
     <div className={'container'}>
       <div className={clsx(styles.root)}>
         <Avatar />
