@@ -1,5 +1,6 @@
 @import "../../../styles/settings.scss";
 
-// .root {
-
-// }
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

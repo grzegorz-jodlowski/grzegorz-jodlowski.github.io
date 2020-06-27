@@ -16,10 +16,10 @@ const Component = ({ className }) => {
   return (
     <section id='skills' className={clsx(className, styles.root)}>
       <div className={'container'}>
-        <Title text='My Skills' variant='big' underline />
-        <SkillsSection skills={workingKnowledge} variant='green' />
-        <SkillsSection skills={knowSomething} variant='violet' />
-        <SkillsSection skills={wantToLearn} variant='blue' />
+        <Title text='My Skills' size='big' underline />
+        <SkillsSection skills={workingKnowledge} title='Working knowledge' variant='green' />
+        <SkillsSection skills={knowSomething} title='Know something about' variant='violet' />
+        <SkillsSection skills={wantToLearn} title='Want to learn' variant='blue' />
       </div>
     </section>
   );

@@ -4,16 +4,22 @@ import clsx from 'clsx';
 
 import styles from './SkillsSection.module.scss';
 
-const Component = ({ className, children }) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>SkillsSection</h2>
-    {children}
-  </div>
+import { Title } from '../../common/Title/Title';
+
+const Component = ({ className, title, variant }) => (
+  <article className={clsx(className, styles.root)}>
+    <Title text={title} size='medium' variant={variant} decoration />
+    <div>
+
+    </div>
+  </article>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
+  variant: PropTypes.string,
+  title: PropTypes.string,
+  skills: PropTypes.array,
 };
 
 export {
