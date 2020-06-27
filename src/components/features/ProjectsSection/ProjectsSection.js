@@ -17,14 +17,19 @@ class Component extends React.Component {
   }
 
   componentDidMount() {
-    if (this.state.projects.length) {
-      // fetch()
-      //   .then
+    if (!this.state.projects.length) {
+      this.setState({ loading: true });
+      fetch('https://api.github.com/users/grzegorz-jodlowski/repos?sort=created?direction=asc')
+        .then(response => response.json())
+        .then(data => this.setState({ projects: [...data], loading: false }))
+        .catch(err => console.log(err));
     }
   }
 
   render() {
-    const { className, projects } = this.props;
+    const { className } = this.props;
+    const { loading, projects } = this.state;
+    console.log(' : Component -> render -> projects', projects);
 
     return (
       <section id='projects' className={clsx(className, styles.root)} >
@@ -41,7 +46,6 @@ class Component extends React.Component {
 
 Component.propTypes = {
   className: PropTypes.string,
-  projects: PropTypes.array,
 };
 
 export {
