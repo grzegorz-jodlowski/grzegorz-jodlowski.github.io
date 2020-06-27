@@ -15,7 +15,7 @@ const Component = ({ className }) => (
     <div className={'container'}>
       <div className={clsx(styles.root)}>
         <Avatar />
-        <Title text={content.heroTitle} variant='big' />
+        <Title text={content.heroTitle} size='big' />
         <p className={styles.description}>
           You might be interested in checking the list of <a href='#skills' className={styles.link}>my skills</a>. Don’t forget to have a glimpse at <a href='#projects' className={styles.link}>my projects</a>. Currently I’m looking for a new challenges so if you have one - <a href='#contact' className={styles.link}>contact me</a> <span role='img' aria-label='smile-emoji'>😊</span>
         </p>
