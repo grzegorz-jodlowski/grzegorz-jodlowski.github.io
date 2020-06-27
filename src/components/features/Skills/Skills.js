@@ -3,18 +3,17 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import styles from './Skills.module.scss';
+import { Title } from '../../common/Title/Title';
 
-const Component = ({ className, children }) => (
+const Component = ({ className }) => (
   <section className={clsx(className, styles.root)}>
     <div className={'container'}>
-      <h2>Skills</h2>
-      {children}
+      <Title text='My Skills' variant='big' underline />
     </div>
   </section>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
 };
 
