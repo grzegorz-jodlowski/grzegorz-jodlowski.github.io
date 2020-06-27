@@ -10,7 +10,7 @@ import { Skill } from '../Skill/Skill';
 const Component = ({ className, title, variant, skills }) => (
   <article className={clsx(className, styles.root)}>
     <Title text={title} size='medium' variant={variant} decoration />
-    <div>
+    <div className={styles.list}>
       {skills.map(skill => <Skill key={skill} variant={variant} text={skill} />)}
     </div>
   </article>

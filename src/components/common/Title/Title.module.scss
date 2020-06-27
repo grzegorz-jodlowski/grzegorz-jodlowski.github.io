@@ -31,3 +31,39 @@
     background-color: $color-header-underline;
   }
 }
+
+.green,
+.violet,
+.blue {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    height: 3px;
+    width: 80px;
+    border-radius: $radius;
+  }
+}
+
+.green {
+  &::after {
+    background-color: $color-knowledge-section;
+    color: $color-knowledge-section;
+  }
+}
+
+.violet {
+  &::after {
+    background-color: $color-something-section;
+    color: $color-something-section;
+  }
+}
+
+.blue {
+  &::after {
+    background-color: $color-want-section;
+    color: $color-want-section;
+  }
+}
