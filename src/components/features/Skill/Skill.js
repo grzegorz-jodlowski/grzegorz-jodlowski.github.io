@@ -6,6 +6,7 @@ import styles from './Skill.module.scss';
 
 const Component = ({ className, variant, text }) => (
   <div className={clsx(className, styles.root)}>
+    <div className={clsx(styles.tick, styles[variant])}><i className="fas fa-check-circle"></i></div>
     {text}
   </div>
 );

@@ -1,5 +1,25 @@
 @import "../../../styles/settings.scss";
 
-// .root {
+.root {
+  font-size: 1.125rem;
+  line-height: 2.5rem;
+}
 
-// }
+.tick {
+  display: inline;
+  font-size: 1rem;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+}
+
+.green {
+  color: $color-knowledge-section;
+}
+
+.violet {
+  color: $color-something-section;
+}
+
+.blue {
+  color: $color-want-section;
+}
