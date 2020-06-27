@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import styles from './Email.module.scss';
 
-const Component = ({ className, email }) => <p className={clsx(className, styles.root)}>{email}</p>;
+const Component = ({ className, email }) => <a href={`mailto:${email}`} className={clsx(className, styles.root)}>{email}</a>;
 
 Component.propTypes = {
   className: PropTypes.string,
