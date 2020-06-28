@@ -1,5 +1,22 @@
 @import "../../../styles/settings.scss";
 
-// .root {
+.root {
+  background-color: $color-background;
+  height: 300px;
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-// }
+.description {
+  flex-grow: 1;
+}
+
+.links {
+  height: 4rem;
+  background-color: $color-background-section;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}

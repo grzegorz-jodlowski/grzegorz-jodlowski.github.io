@@ -6,8 +6,13 @@ import styles from './Project.module.scss';
 
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Project</h2>
-    {children}
+    <div className={styles.description}>
+      <h2>Project</h2>
+    </div>
+    <div className={styles.links}>
+      Demo
+    </div>
+
   </div>
 );
 
