@@ -10,8 +10,20 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.description {
+.header {
   flex-grow: 1;
+  padding: 2rem;
+}
+
+.githubLogo {
+  font-size: 3rem;
+  color: $color-header;
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: $color-header;
+  margin-bottom: 1rem;
 }
 
 .links {

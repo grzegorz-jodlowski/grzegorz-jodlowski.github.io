@@ -4,10 +4,15 @@ import clsx from 'clsx';
 
 import styles from './Project.module.scss';
 
-const Component = ({ className, children }) => (
+import { nameFromDashedTitle } from '../../../utils/nameFromDashedTitle';
+
+const Component = ({ className, name, description }) => (
   <div className={clsx(className, styles.root)}>
-    <div className={styles.description}>
-      <h2>Project</h2>
+    <div className={styles.header}>
+      <i className={clsx(styles.githubLogo, 'fab fa-github')}></i>
+      <h2 className={styles.title}>{nameFromDashedTitle(name)}</h2>
+      <p className={styles.subtitle}>{description}</p>
+
     </div>
     <div className={styles.links}>
       Demo
@@ -17,8 +22,9 @@ const Component = ({ className, children }) => (
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export {

@@ -9,7 +9,7 @@ import { Project } from '../Project/Project';
 
 const Component = ({ className, projects }) => (
   <div className={clsx(className, styles.root)}>
-    {projects.map(project => <Project key={project.id} />)}
+    {projects.map(project => <Project key={project.id} {...project} />)}
   </div>
 );
 
