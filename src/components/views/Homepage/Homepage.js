@@ -8,8 +8,6 @@ import { Logo } from '../../common/Logo/Logo';
 import { Hero } from '../../features/Hero/Hero';
 import { SkillsSection } from '../../features/SkillsSection/SkillsSection';
 import { ProjectsSection } from '../../features/ProjectsSection/ProjectsSection';
-import { Courses } from '../../features/Courses/Courses';
-
 
 const Component = ({ className, children }) => (
   <main className={clsx(className, styles.root)}>
@@ -17,7 +15,6 @@ const Component = ({ className, children }) => (
     <Hero />
     <SkillsSection />
     <ProjectsSection />
-    <Courses />
   </main>
 
 );
