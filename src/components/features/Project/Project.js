@@ -7,8 +7,9 @@ import styles from './Project.module.scss';
 import { nameFromDashedTitle } from '../../../utils/nameFromDashedTitle';
 
 import { Title } from '../../common/Title/Title';
+import { Link } from '../../common/Link/Link';
 
-const Component = ({ className, name, description }) => (
+const Component = ({ className, name, description, homepage }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.header}>
       <i className={clsx(styles.githubLogo, 'fab fa-github')}></i>
@@ -17,7 +18,8 @@ const Component = ({ className, name, description }) => (
 
     </div>
     <div className={styles.links}>
-      Demo
+      <Link icon='desktop' text='Demo' source={homepage} />
+      <Link icon='code' text='Github' source={homepage} />
     </div>
 
   </div>
@@ -27,6 +29,7 @@ Component.propTypes = {
   className: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
+  homepage: PropTypes.string,
 };
 
 export {
