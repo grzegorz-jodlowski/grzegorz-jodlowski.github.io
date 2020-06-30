@@ -19,11 +19,11 @@ class Component extends React.Component {
 
   componentDidMount() {
     if (!this.state.projects.length) {
-      // this.setState({ loading: true });
-      // fetch('https://api.github.com/users/grzegorz-jodlowski/repos?sort=created?direction=asc')
-      // .then(response => response.json())
-      // .then(data => this.setState({ projects: [...data], loading: false }))
-      // .catch(err => console.log(err));
+      this.setState({ loading: true });
+      fetch('https://api.github.com/users/grzegorz-jodlowski/repos?sort=created?direction=asc')
+        .then(response => response.json())
+        .then(data => this.setState({ projects: [...data], loading: false }))
+        .catch(err => console.log(err));
     }
   }
 
@@ -37,8 +37,14 @@ class Component extends React.Component {
         <div className={'container'}>
           <Title text='Recent projects' size='big' />
           <p className={styles.description}>{content.projectDescription}</p>
-          {/* {loading ? <Spinner /> : <Projects projects={projects} />} */}
-          {loading ? <Spinner /> : <Projects projects={[1, 2, 3, 4, 5, 6]} />}
+          {loading ? <Spinner /> : <Projects projects={projects} />}
+          {/* {loading ? <Spinner /> : <Projects projects={[{
+            description: 'Project for mastering React, Express and MongoDB',
+            name: "courses-for-pharmacists",
+            homepage: "https://online-pharmacy-site.herokuapp.com/",
+            language: "JavaScript",
+            tags_url: "https://api.github.com/repos/grzegorz-jodlowski/courses-for-pharmacists/tags",
+          }]} />} */}
         </div>
       </section>
     );
