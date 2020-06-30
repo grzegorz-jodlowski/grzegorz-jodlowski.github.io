@@ -6,11 +6,13 @@ import styles from './Project.module.scss';
 
 import { nameFromDashedTitle } from '../../../utils/nameFromDashedTitle';
 
+import { Title } from '../../common/Title/Title';
+
 const Component = ({ className, name, description }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.header}>
       <i className={clsx(styles.githubLogo, 'fab fa-github')}></i>
-      <h2 className={styles.title}>{nameFromDashedTitle(name)}</h2>
+      <Title className={styles.title} text={nameFromDashedTitle(name)} size='small' />
       <p className={styles.subtitle}>{description}</p>
 
     </div>
