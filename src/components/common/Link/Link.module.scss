@@ -9,19 +9,19 @@
   font-size: 1.125rem;
   line-height: 2rem;
   padding: 0 2rem;
+}
 
-  &:last-child {
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      height: 50%;
-      width: 3px;
-      background-color: $color-background;
-    }
+.separator {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 50%;
+    width: 3px;
+    background-color: $color-background;
   }
 }
 
