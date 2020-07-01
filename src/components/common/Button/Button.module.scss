@@ -1,0 +1,19 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin: 3rem auto 0;
+  display: block;
+  background-color: $color-background-dark;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: $transition;
+  border: none;
+  color: $color-text-bright;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+
+  &:hover {
+    background-color: rgba($color-background-dark, 0.8);
+  }
+}
