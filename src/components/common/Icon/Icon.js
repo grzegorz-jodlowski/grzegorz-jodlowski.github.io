@@ -4,16 +4,14 @@ import clsx from 'clsx';
 
 import styles from './Icon.module.scss';
 
-const Component = ({ className, children }) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>Icon</h2>
-    {children}
-  </div>
+const Component = ({ className, link, icon }) => (
+  <a href={link} className={clsx(className, styles.root)}><i className={icon}></i></a>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
+  link: PropTypes.string,
+  icon: PropTypes.string,
 };
 
 export {

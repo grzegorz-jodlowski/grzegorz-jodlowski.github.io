@@ -9,9 +9,9 @@ import { Icon } from '../../common/Icon/Icon';
 
 const Component = ({ className, gitHub, linkedIn, facebook }) => (
   <div className={clsx(className, styles.root)}>
-    <Icon link={gitHub} icon='' />
-    <Icon link={linkedIn} icon='' />
-    <Icon link={facebook} icon='' />
+    <Icon link={gitHub} icon='fab fa-github' />
+    <Icon link={linkedIn} icon='fab fa-linkedin' />
+    <Icon link={facebook} icon='fab fa-facebook-square' />
   </div>
 );
 
