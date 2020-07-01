@@ -40,7 +40,8 @@
 
 .green,
 .violet,
-.blue {
+.blue,
+.contact {
   &::after {
     content: "";
     display: block;
@@ -71,5 +72,13 @@
   &::after {
     background-color: $color-want-section;
     color: $color-want-section;
+  }
+}
+
+.contact {
+  color: $color-text-bright;
+  &::after {
+    background-color: $color-contact-section;
+    color: $color-contact-section;
   }
 }
