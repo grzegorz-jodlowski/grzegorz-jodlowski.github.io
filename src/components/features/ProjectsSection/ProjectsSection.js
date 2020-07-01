@@ -5,46 +5,56 @@ import clsx from 'clsx';
 import styles from './ProjectsSection.module.scss';
 
 import { Title } from '../../common/Title/Title';
+import { Button } from '../../common/Button/Button';
 import { Projects } from '../Projects/Projects';
+import { Spinner } from '../../common/Spinner/Spinner';
 
 import { content } from '../../../content';
-import { Spinner } from '../../common/Spinner/Spinner';
 
 
 class Component extends React.Component {
   state = {
     loading: false,
-    projects: [],
+    loadedProjects: [],
+    displayedProjects: [],
   }
 
-  componentDidMount() {
-    if (!this.state.projects.length) {
+  componentDidMount = () => {
+    if (!this.state.loadedProjects.length) {
       this.setState({ loading: true });
       fetch('https://api.github.com/users/grzegorz-jodlowski/repos?sort=created?direction=asc')
         .then(response => response.json())
-        .then(data => this.setState({ projects: [...data], loading: false }))
+        .then(data => this.setState({ loadedProjects: [...data], displayedProjects: data.slice(0, 8), loading: false }))
         .catch(err => console.log(err));
     }
   }
 
+  handleShowMore = () => {
+    const { loadedProjects, displayedProjects } = this.state;
+    this.setState({ displayedProjects: [...displayedProjects, ...loadedProjects.slice(displayedProjects.length, displayedProjects.length + 8)] });
+  }
+
+
   render() {
     const { className } = this.props;
-    const { loading, projects } = this.state;
-    console.log(' : Component -> render -> projects', projects);
+    const { loading, displayedProjects, loadedProjects } = this.state;
+    console.log(' : Component -> render -> displayedProjects', displayedProjects);
 
     return (
       <section id='projects' className={clsx(className, styles.root)} >
         <div className={'container'}>
           <Title text='Recent projects' size='big' />
           <p className={styles.description}>{content.projectDescription}</p>
-          {loading ? <Spinner /> : <Projects projects={projects} />}
+          {loading ? <Spinner /> : <Projects projects={displayedProjects} />}
           {/* {loading ? <Spinner /> : <Projects projects={[{
             description: 'Project for mastering React, Express and MongoDB',
             name: "courses-for-pharmacists",
             homepage: "https://online-pharmacy-site.herokuapp.com/",
             language: "JavaScript",
             tags_url: "https://api.github.com/repos/grzegorz-jodlowski/courses-for-pharmacists/tags",
+            html_url: "https://github.com/grzegorz-jodlowski/courses-for-pharmacists",
           }]} />} */}
+          {(displayedProjects.length !== loadedProjects.length) && <Button text='Show more' action={this.handleShowMore} />}
         </div>
       </section>
     );
