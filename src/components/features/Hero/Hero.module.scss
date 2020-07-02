@@ -18,6 +18,10 @@
   font-weight: 300;
   font-size: 1.25rem;
   line-height: 2.25rem;
+
+  @media (max-width: $breakpoint-m) {
+    text-align: center;
+  }
 }
 
 .link {

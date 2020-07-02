@@ -4,8 +4,8 @@
   display: inline-block;
   position: relative;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.125rem;
+  line-height: 2rem;
   color: $color-link;
 
   &::after {
@@ -17,5 +17,13 @@
     height: 2px;
     width: 100%;
     background-color: $color-link;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 1rem;
+    line-height: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
