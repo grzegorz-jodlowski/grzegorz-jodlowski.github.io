@@ -7,6 +7,11 @@
   border-radius: 50%;
   background-color: $UI2;
   margin-bottom: 2rem;
+
+  @media (max-width: $breakpoint-s) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .image {
