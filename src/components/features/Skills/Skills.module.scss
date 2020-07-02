@@ -4,9 +4,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 8rem;
+
+  @media (max-width: $breakpoint-m) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $breakpoint-m) {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  @media (max-width: $breakpoint-s) {
+    grid-template-columns: 1fr;
+  }
 }
