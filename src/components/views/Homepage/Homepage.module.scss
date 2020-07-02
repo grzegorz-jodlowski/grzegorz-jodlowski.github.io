@@ -14,4 +14,7 @@
     right: 1rem;
     width: 6rem;
   }
+  @media (max-width: $breakpoint-s) {
+    display: none;
+  }
 }
