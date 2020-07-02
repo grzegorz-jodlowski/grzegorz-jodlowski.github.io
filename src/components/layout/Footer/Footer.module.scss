@@ -11,6 +11,10 @@
   width: 50%;
   margin-top: 1rem;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 1.125rem;
+  line-height: 2rem;
+
+  @media (max-width: $breakpoint-s) {
+    width: 100%;
+  }
 }
