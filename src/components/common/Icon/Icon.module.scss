@@ -6,4 +6,8 @@
   text-decoration: none;
   color: $color-text-bright;
   margin-right: 2rem;
+
+  @media (max-width: $breakpoint-xs) {
+    margin-right: 0;
+  }
 }
