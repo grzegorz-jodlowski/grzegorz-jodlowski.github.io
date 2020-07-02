@@ -9,6 +9,10 @@
   font-size: 1.125rem;
   line-height: 2rem;
   padding: 0 2rem;
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 0 1rem;
+  }
 }
 
 .separator {
@@ -22,6 +26,10 @@
     height: 50%;
     width: 3px;
     background-color: $color-background;
+
+    @media (max-width: $breakpoint-xs) {
+      display: none;
+    }
   }
 }
 
