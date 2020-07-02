@@ -7,6 +7,9 @@
 .root {
   width: 70%;
   padding-bottom: 8rem;
+  @media (max-width: $breakpoint-m) {
+    width: 100%;
+  }
 }
 
 .description {

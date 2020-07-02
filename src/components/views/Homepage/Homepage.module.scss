@@ -9,4 +9,9 @@
   position: absolute;
   top: -3rem;
   right: 5rem;
+  @media (max-width: $breakpoint-m) {
+    top: -7rem;
+    right: 1rem;
+    width: 6rem;
+  }
 }
