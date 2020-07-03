@@ -1,0 +1,54 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: $color-background-dark;
+  color: $color-text-bright;
+  padding: 1rem 1.5rem;
+  border-radius: $radius;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(100% - 2rem);
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent;
+    border-right: 1.5rem solid $color-background-dark;
+    transform: rotate(52deg);
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    display: none;
+  }
+}
+
+.icon {
+  display: inline-block;
+  padding: 0.3rem;
+  font-size: 2rem;
+  transition: $transition;
+  transform-origin: bottom right;
+  transform: rotate(0deg);
+  cursor: default;
+
+  &:hover {
+    animation: shake 0.7s infinite both;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
