@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://grzegorz-jodlowski.github.io/"><img src="public/logo.svg" style='height: 400px;' title="logo" alt="logo of owner's portfolio."></a>
+<a href="https://grzegorz-jodlowski.github.io/"><img src="public/Logo.png" style='height: 400px;' title="logo" alt="logo of owner's portfolio."></a>
 </p>
 
 <br>
