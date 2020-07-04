@@ -3,7 +3,7 @@
 .root {
   position: relative;
   background-color: $color-background;
-  height: 300px;
+  min-height: 300px;
   border-radius: $radius;
   display: flex;
   flex-direction: column;
@@ -44,6 +44,7 @@
   font-weight: 300;
   font-size: 1rem;
   line-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .links {
