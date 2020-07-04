@@ -9,18 +9,15 @@ import { Hero } from '../../features/Hero/Hero';
 import { SkillsSection } from '../../features/SkillsSection/SkillsSection';
 import { ProjectsSection } from '../../features/ProjectsSection/ProjectsSection';
 
-const Component = ({ className, children }) => (
+const Component = ({ className }) =>
   <main className={clsx(className, styles.root)}>
     <Logo className={styles.logo} />
     <Hero />
     <SkillsSection />
     <ProjectsSection />
-  </main>
-
-);
+  </main>;
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
 };
 

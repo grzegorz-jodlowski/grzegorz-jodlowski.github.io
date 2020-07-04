@@ -10,7 +10,7 @@ import { Socials } from '../../features/Socials/Socials';
 
 import { content } from '../../../content';
 
-const Component = ({ className }) => (
+const Component = ({ className }) =>
   <footer id='contact' className={clsx(className, styles.root)}>
     <div className={'container'}>
       <Title text='Contact me' size='medium' variant='contact' decoration />
@@ -18,8 +18,7 @@ const Component = ({ className }) => (
       <Socials gitHub={content.gitHub} linkedIn={content.linkedIn} facebook={content.facebook} />
       <Email email={content.email} />
     </div>
-  </footer>
-);
+  </footer>;
 
 Component.propTypes = {
   className: PropTypes.string,

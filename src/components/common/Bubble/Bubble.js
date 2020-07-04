@@ -4,7 +4,10 @@ import clsx from 'clsx';
 
 import styles from './Bubble.module.scss';
 
-const Component = ({ className, text, icon }) => <div className={clsx(className, styles.root)}>{text}<span className={styles.icon}>{icon}</span></div>;
+const Component = ({ className, text, icon }) =>
+  <div className={clsx(className, styles.root)}>
+    {text}<span className={styles.icon}>{icon}</span>
+  </div>;
 
 Component.propTypes = {
   className: PropTypes.string,

@@ -6,12 +6,10 @@ import styles from './Projects.module.scss';
 
 import { Project } from '../Project/Project';
 
-
-const Component = ({ className, projects }) => (
+const Component = ({ className, projects }) =>
   <div className={clsx(className, styles.root)}>
     {projects.map(project => <Project key={project.id} {...project} />)}
-  </div>
-);
+  </div>;
 
 Component.propTypes = {
   className: PropTypes.string,

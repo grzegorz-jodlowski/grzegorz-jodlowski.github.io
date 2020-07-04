@@ -4,9 +4,10 @@ import clsx from 'clsx';
 
 import styles from './Icon.module.scss';
 
-const Component = ({ className, link, icon }) => (
-  <a href={link} className={clsx(className, styles.root)}><i className={icon}></i></a>
-);
+const Component = ({ className, link, icon }) =>
+  <a href={link} className={clsx(className, styles.root)}>
+    <i className={icon}></i>
+  </a>;
 
 Component.propTypes = {
   className: PropTypes.string,

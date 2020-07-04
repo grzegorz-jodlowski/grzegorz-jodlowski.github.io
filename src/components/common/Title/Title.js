@@ -4,7 +4,10 @@ import clsx from 'clsx';
 
 import styles from './Title.module.scss';
 
-const Component = ({ className, size, text, variant, underline }) => <h2 className={clsx(className, styles.root, styles[size], styles[variant], underline && styles.underline)}>{text}</h2>;
+const Component = ({ className, size, text, variant, underline }) =>
+  <h2 className={clsx(className, styles.root, styles[size], styles[variant], underline && styles.underline)}>
+    {text}
+  </h2>;
 
 Component.propTypes = {
   className: PropTypes.string,

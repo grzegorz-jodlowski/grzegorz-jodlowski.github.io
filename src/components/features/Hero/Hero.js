@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import styles from './Hero.module.scss';
-import { content } from '../../../content';
 
 import { Avatar } from '../../common/Avatar/Avatar';
 import { Title } from '../../common/Title/Title';
 import { Email } from '../../common/Email/Email';
 
+import { content } from '../../../content';
 
-const Component = ({ className }) => (
+const Component = ({ className }) =>
   <section className={clsx(className, styles.section)}>
     <div className={'container'}>
       <div className={clsx(styles.root)}>
@@ -22,8 +22,7 @@ const Component = ({ className }) => (
         <Email email={content.email} />
       </div>
     </div>
-  </section>
-);
+  </section>;
 
 Component.propTypes = {
   className: PropTypes.string,

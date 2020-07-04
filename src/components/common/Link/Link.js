@@ -4,7 +4,10 @@ import clsx from 'clsx';
 
 import styles from './Link.module.scss';
 
-const Component = ({ className, source, icon, text, separator }) => <a href={source} className={clsx(className, styles.root, separator && styles.separator)}><i className={clsx(styles.icon, `fas fa-${icon}`)}></i>{text}</a>;
+const Component = ({ className, source, icon, text, separator }) =>
+  <a href={source} className={clsx(className, styles.root, separator && styles.separator)}>
+    <i className={clsx(styles.icon, `fas fa-${icon}`)}></i>{text}
+  </a>;
 
 Component.propTypes = {
   className: PropTypes.string,

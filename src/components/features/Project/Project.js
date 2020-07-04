@@ -4,13 +4,14 @@ import clsx from 'clsx';
 
 import styles from './Project.module.scss';
 
-import { nameFromDashedTitle } from '../../../utils/nameFromDashedTitle';
-
 import { Title } from '../../common/Title/Title';
 import { Link } from '../../common/Link/Link';
 
+import { nameFromDashedTitle } from '../../../utils/nameFromDashedTitle';
+
 const Component = ({ className, name, description, homepage, html_url, id }) => {
   const starredProjects = [269592157, 266321545, 252203276, 216858353, 240736461, 254131413, 260241952, 236449516];
+
   return (
     <div className={clsx(className, styles.root)}>
       {starredProjects.includes(id) && <i className={clsx(styles.star, 'fas fa-star')}></i>}
