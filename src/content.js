@@ -2,7 +2,7 @@ export const content = {
   heroTitle: 'My name is Grzegorz and I’m Frontend developer, Pharmacist and mountain lover.',
   email: 'grzegorz.jodlowski@gmail.com',
   skills: {
-    workingKnowledge: ['React', 'React Router', 'Redux', 'Express.js', 'MongoDB', 'Mongoose', 'JavaScript ES6+ features', 'SASS', 'Flexbox', 'CSS Grid', 'BEM', 'Semantic HTML5', 'Working with API', 'Progressive web apps', 'Jira', 'Git', 'GitHub'],
+    workingKnowledge: ['React', 'React Router', 'Redux', 'Express.js', 'MongoDB', 'Mongoose', 'JavaScript ES6+ features', 'SASS & CSS Modules', 'Flexbox', 'CSS Grid', 'BEM', 'Semantic HTML5', 'Working with API', 'Progressive web apps', 'Jira', 'Git', 'GitHub'],
     knowSomething: ['Electron', 'Jest/Enzyme', 'Mocha/Chai', 'Figma', 'Material-UI', 'Axios', 'Thunk', 'Accessibility', 'Websockets'],
     wantToLearn: ['Server side rendering', 'Gatsby', 'Typescript', 'GraphQL', 'React native'],
   },
