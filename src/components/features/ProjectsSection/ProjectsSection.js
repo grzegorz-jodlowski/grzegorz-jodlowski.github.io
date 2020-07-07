@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
@@ -11,46 +11,42 @@ import { Spinner } from '../../common/Spinner/Spinner';
 
 import { content } from '../../../content';
 
-class Component extends React.Component {
-  state = {
-    loading: false,
-    loadedProjects: [],
-    displayedProjects: [],
-  }
+const Component = ({ className }) => {
 
-  componentDidMount = () => {
-    if (!this.state.loadedProjects.length) {
-      this.setState({ loading: true });
+  const [loading, setLoading] = useState(false);
+  const [loadedProjects, setLoadedProjects] = useState([]);
+  const [displayedProjects, setDisplayedProjects] = useState([]);
+
+  useEffect(() => {
+    if (!loadedProjects.length) {
+      setLoading(true);
 
       fetch('https://api.github.com/users/grzegorz-jodlowski/repos?sort=created?direction=asc')
         .then(response => response.json())
-        .then(data => this.setState({ loadedProjects: [...data], displayedProjects: data.slice(0, 8), loading: false }))
+        .then(data => {
+          setLoadedProjects([...data]);
+          setDisplayedProjects(data.slice(0, 8));
+          setLoading(false);
+        })
         .catch(err => console.log(err));
     }
-  }
+  }, [loadedProjects.length]);
 
-  handleShowMore = () => {
-    const { loadedProjects, displayedProjects } = this.state;
+  const handleShowMore = () => {
+    setDisplayedProjects([...displayedProjects, ...loadedProjects.slice(displayedProjects.length, displayedProjects.length + 8)]);
+  };
 
-    this.setState({ displayedProjects: [...displayedProjects, ...loadedProjects.slice(displayedProjects.length, displayedProjects.length + 8)] });
-  }
-
-  render() {
-    const { className } = this.props;
-    const { loading, displayedProjects, loadedProjects } = this.state;
-
-    return (
-      <section id='projects' className={clsx(className, styles.root)} >
-        <div className={'container'}>
-          <Title text='Recent projects' size='big' />
-          <p className={styles.description}>{content.projectDescription}</p>
-          {loading ? <Spinner /> : <Projects projects={displayedProjects} />}
-          {(displayedProjects.length !== loadedProjects.length) && <Button text='Show more' action={this.handleShowMore} />}
-        </div>
-      </section>
-    );
-  }
-}
+  return (
+    <section id='projects' className={clsx(className, styles.root)} >
+      <div className={'container'}>
+        <Title text='Recent projects' size='big' />
+        <p className={styles.description}>{content.projectDescription}</p>
+        {loading ? <Spinner /> : <Projects projects={displayedProjects} />}
+        {(displayedProjects.length !== loadedProjects.length) && <Button text='Show more' action={handleShowMore} />}
+      </div>
+    </section>
+  );
+};
 
 Component.propTypes = {
   className: PropTypes.string,
