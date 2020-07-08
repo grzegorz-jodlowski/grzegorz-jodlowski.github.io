@@ -39,6 +39,7 @@ const Component = ({ className }) => {
   return (
     <section id='projects' className={clsx(className, styles.root)} >
       <div className={'container'}>
+        <div className={styles.projectsNumber}><span>{`${displayedProjects.length}/${loadedProjects.length}`}</span></div>
         <Title text='Recent projects' size='big' />
         <p className={styles.description}>{content.projectDescription}</p>
         {loading ? <Spinner /> : <Projects projects={displayedProjects} />}

@@ -22,3 +22,19 @@
     width: 100%;
   }
 }
+
+.projectsNumber {
+  position: sticky;
+  text-align: right;
+  top: 2rem;
+  z-index: 99;
+  font-size: 1rem;
+
+  & > span {
+    background-color: $color-background-section;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: $radius;
+    margin-right: 1rem;
+  }
+}
