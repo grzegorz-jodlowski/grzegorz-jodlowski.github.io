@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import styles from './Icon.module.scss';
 
 const Component = ({ className, link, icon }) =>
-  <a href={link} className={clsx(className, styles.root)}>
+  <a href={link} target="_blank" rel="noopener noreferrer" className={clsx(className, styles.root)}>
     <i className={icon}></i>
   </a>;
 

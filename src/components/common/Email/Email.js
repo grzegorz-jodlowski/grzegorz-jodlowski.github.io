@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import styles from './Email.module.scss';
 
 const Component = ({ className, email }) =>
-  <a href={`mailto:${email}`} className={clsx(className, styles.root)}>
+  <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer" className={clsx(className, styles.root)}>
     {email}
   </a>;
 
