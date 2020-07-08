@@ -6,7 +6,7 @@ import styles from './Logo.module.scss';
 
 import { content } from '../../../content';
 
-const Component = ({ className }) => <a href={content.gitHub} target="_blank" rel="noopener noreferrer"><img src='logo.svg' alt='Website logo.' className={clsx(className, styles.root)} /></a>;
+const Component = ({ className }) => <a href={content.gitHub} target="_blank" rel="noopener noreferrer"><img src='Logo.svg' alt='Website logo.' className={clsx(className, styles.root)} /></a>;
 
 Component.propTypes = {
   className: PropTypes.string,
