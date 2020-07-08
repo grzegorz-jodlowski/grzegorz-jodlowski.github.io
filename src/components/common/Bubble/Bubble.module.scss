@@ -21,10 +21,6 @@
     transform: rotate(52deg);
   }
 
-  &:hover .icon {
-    animation: shake 0.7s infinite both;
-  }
-
   @media (max-width: $breakpoint-xs) {
     display: none;
   }
@@ -38,6 +34,7 @@
   transform-origin: bottom right;
   transform: rotate(0deg);
   cursor: default;
+  animation: shake 0.7s infinite both;
 }
 
 @keyframes shake {
@@ -46,7 +43,7 @@
   }
 
   50% {
-    transform: rotate(30deg);
+    transform: rotate(20deg);
   }
   100% {
     transform: rotate(0deg);
