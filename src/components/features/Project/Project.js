@@ -11,6 +11,7 @@ import { nameFromDashedTitle } from '../../../utils/nameFromDashedTitle';
 
 const Component = ({ className, name, description, homepage, html_url, id }) => {
   const starredProjects = [269592157, 266321545, 252203276, 216858353, 240736461, 254131413, 260241952, 236449516];
+  const isPortfolioProject = name === 'grzegorz-jodlowski.github.io';
 
   return (
     <div className={clsx(className, styles.root)}>
@@ -22,8 +23,8 @@ const Component = ({ className, name, description, homepage, html_url, id }) => 
 
       </div>
       <div className={styles.links}>
-        {homepage && <Link icon='desktop' text='Demo' source={homepage} />}
-        {html_url && <Link icon='code' text='Github' source={html_url} separator={homepage ? true : false} />}
+        {homepage && (isPortfolioProject || <Link icon='desktop' text='Demo' source={homepage} />)}
+        {html_url && <Link icon='code' text='Github' source={html_url} separator={homepage && isPortfolioProject ? false : homepage} />}
       </div>
     </div>
   );
