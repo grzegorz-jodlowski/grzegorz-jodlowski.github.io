@@ -24,8 +24,10 @@ const Component = ({ className }) => {
       fetch('https://api.github.com/users/grzegorz-jodlowski/repos?sort=created?direction=asc')
         .then(response => response.json())
         .then(data => {
-          setLoadedProjects([...data]);
-          setDisplayedProjects(data.slice(0, 8));
+          const projects = data.filter(project => project.name !== 'grzegorz-jodlowski');
+
+          setLoadedProjects([...projects]);
+          setDisplayedProjects(projects.slice(0, 8));
           setLoading(false);
         })
         .catch(err => console.log(err));
