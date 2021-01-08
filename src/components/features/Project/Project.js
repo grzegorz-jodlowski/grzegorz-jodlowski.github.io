@@ -10,7 +10,7 @@ import { Link } from '../../common/Link/Link';
 import { nameFromDashedTitle } from '../../../utils/nameFromDashedTitle';
 
 const Component = ({ className, name, description, homepage, html_url, id }) => {
-  const starredProjects = [269592157, 266321545, 252203276, 216858353, 240736461, 254131413, 260241952, 236449516];
+  const starredProjects = [269592157, 266321545, 252203276, 216858353, 240736461, 254131413, 260241952, 236449516, 313364524];
   const isPortfolioProject = name === 'grzegorz-jodlowski.github.io';
 
   return (
