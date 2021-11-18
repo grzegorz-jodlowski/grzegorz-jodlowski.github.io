@@ -12,7 +12,7 @@ import { ProjectsSection } from '../../features/ProjectsSection/ProjectsSection'
 const Component = ({ className }) =>
   <main className={clsx(className, styles.root)}>
     {console.log('Hello! nice to meet you 👨‍💻 feel free to contact me via email 📧')}
-    <Logo className={styles.logo} />
+    {/* <Logo className={styles.logo} /> */}
     <Hero />
     <SkillsSection />
     <ProjectsSection />
