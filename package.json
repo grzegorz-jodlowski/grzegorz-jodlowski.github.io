@@ -11,7 +11,7 @@
     "test-all": "react-scripts test --watchAll=false --noStackTrace",
     "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build -b master"
   },
   "husky": {
@@ -21,7 +21,7 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "yarn test-related --",
+      "npm run test-related --",
       "eslint"
     ]
   },
